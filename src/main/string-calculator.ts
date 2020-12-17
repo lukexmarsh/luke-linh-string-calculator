@@ -1,9 +1,13 @@
 export function Add(numbers: string) {
-  if (numbers === "") return 0;
-  if (numbers.length === 3) {
-    return Number(numbers[0]) + Number(numbers[2]);
+  const numbersArray = numbers.split(",");
+
+  let result = 0;
+  for (let index = 0; index < numbersArray.length; index++) {
+    const number = numbersArray[index];
+    if (number === "") {
+      return 0;
+    }
+    result += Number(number);
   }
-  if (numbers.length > 3) {
-    return Number(numbers[0]) + Number(numbers[2]) + Number(numbers[4]) + Number(numbers[6]);
-  }
+  return result;
 }
