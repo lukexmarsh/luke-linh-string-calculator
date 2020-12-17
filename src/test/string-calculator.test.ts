@@ -7,4 +7,7 @@ describe("string calculator", () => {
   it("returns the sum of 2 numbers received", () => {
     expect(Add("3,5")).toEqual(8);
   });
+  it("returns the sum of all numbers received", () => {
+    expect(Add("3,5,7,8")).toEqual(23);
+  });
 });
