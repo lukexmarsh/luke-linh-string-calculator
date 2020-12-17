@@ -7,7 +7,7 @@ export function Add(numbers: string) {
     if (number === "") {
       return 0;
     }
-    result += Number(number);
+    result += parseInt(number);
   }
   return result;
 }

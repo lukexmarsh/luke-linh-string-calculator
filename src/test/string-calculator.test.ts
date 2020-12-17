@@ -8,6 +8,9 @@ describe("string calculator", () => {
     expect(Add("3,5")).toEqual(8);
   });
   it("returns the sum of all numbers received", () => {
-    expect(Add("3,5,7,8")).toEqual(23);
+    expect(Add("13,5,7,8")).toEqual(33);
+  });
+  it("returns the sum of all numbers when receiving a newline", () => {
+    expect(Add("1\n2,3")).toEqual(6);
   });
 });
