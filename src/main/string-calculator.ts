@@ -1,5 +1,5 @@
 export function Add(numbers: string) {
-  const numbersArray = numbers.split(",");
+  const numbersArray = numbers.split(/[,\n]/g);
 
   let result = 0;
   for (let index = 0; index < numbersArray.length; index++) {
